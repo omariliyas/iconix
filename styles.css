@@ -6,8 +6,8 @@
     --border-color: rgba(255, 255, 255, 0.08);
     --border-color-hover: rgba(255, 255, 255, 0.2);
 
-    --accent-blue: #0052FF;
-    --accent-purple: #7000FF;
+    --accent-blue: #006eff;
+    --accent-purple: #3082ee;
     --gradient-primary: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
 
     --text-primary: #FFFFFF;
@@ -71,7 +71,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 24 24px;
+    padding: 24px;
 }
 
 section {
@@ -233,9 +233,9 @@ nav.scrolled {
     inset: 30% 10%;
     background:
         radial-gradient(ellipse at 5% 10%,
-            #2A67FE 0%,
-            #2012FB 20%,
-            #00016D 40%,
+            #006dff 0%,
+            #1152E2 20%,
+            #2237c6 40%,
             transparent 65%);
     filter: blur(80px);
     transform: rotate(-18deg) scale(1.4);
@@ -249,9 +249,9 @@ nav.scrolled {
     inset: 0;
     background:
         radial-gradient(ellipse at 55% 15%,
-            rgba(42, 103, 254, 0.45) 0%,
-            rgba(32, 18, 251, 0.28) 25%,
-            rgba(0, 1, 109, 0.18) 40%,
+            rgba(0, 110, 255, 0.5) 0%,
+            rgba(17, 83, 226, 0.329) 25%,
+            rgba(34, 56, 198, 0.144) 40%,
             transparent 55%),
         linear-gradient(to bottom,
             transparent 0%,
@@ -635,26 +635,106 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
+    section {
+        padding-top: 72px;
+    }
+
+    .section-padding {
+        padding-bottom: 72px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 12px;
     }
 
     .nav-links {
         display: none;
     }
 
+    nav {
+        padding: 16px 0;
+    }
+
+    nav .btn-primary {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 64px;
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
     }
 
     .hero-cta {
         flex-direction: column;
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 28px 24px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .clients {
+        padding: 32px 0;
+    }
+
+    .marquee {
+        gap: 40px;
+        padding-left: 40px;
+        animation-duration: 16s;
+    }
+
+    .marquee img {
+        height: 48px;
     }
 
     .footer-content {
         flex-direction: column;
+        gap: 32px;
+        margin-bottom: 40px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 32px;
     }
 
     .cta-box {
@@ -663,6 +743,38 @@ footer {
 
     .cta-box h2 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 18px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .badge {
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .portfolio-info {
+        padding: 20px;
+    }
+
+    .footer-brand p,
+    .link-group a {
+        font-size: 0.9rem;
     }
 }
 
@@ -761,9 +873,25 @@ footer {
 }
 
 @media (max-width: 768px) {
-
     .about-hero,
     .split-section {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .about-hero {
+        padding-top: 120px;
+    }
+
+    .about-hero-content h1 {
+        font-size: 2.6rem;
+    }
+
+    .split-text h2 {
+        font-size: 2rem;
+    }
+
+    .team-grid {
         grid-template-columns: 1fr;
     }
 }
